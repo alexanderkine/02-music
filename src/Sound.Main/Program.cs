@@ -9,9 +9,10 @@ namespace Sound.Main
         {
             using (var waveOut = new WaveOut())
             {
+                //waveOut.Init(new LoopingSampleProvider(new MySampleProvider()));
                 waveOut.Init(new MySampleProvider());
+                //waveOut.Init(new AudioFileReader("getup.wav"));
                 waveOut.Play();
-
                 Console.ReadKey(false);
             }
         }
